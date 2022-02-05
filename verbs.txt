@@ -1,0 +1,5 @@
+to be, être, ser, False, ét, True, été, False, False, True, suis, es, est, sommes, êtes, sont
+to go, aller, ir, True, all, True, allé, True, False, True, vais, vas, va, allons, allez, vont
+to work, travailler, travailler, False, travaill, False, travaillé, False, False, False
+to eat, manger, manger, False, mang, False, mangé, False, False, False
+to be able to, pouvoir, pourr, False, pouv, False, pu, False, False, True, peux, peux, peut, pouvons, pouvez, pouvent
