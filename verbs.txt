@@ -68,3 +68,4 @@ to wake up, réveiller, True, réveiller, réveill, réveillé, True, False
 to walk, marcher, False, marcher, march, marché, False, False
 to wear, porter, False, porter, port, porté, False, False
 to write, écrire, False, écrir, écriv, écrit, False, True, écris, écris, écrit, écrivons, écrivez, écrivent
+to have, avoir, False, aur, av, eu, False, True, ai, as, a, avons, avez, ont
