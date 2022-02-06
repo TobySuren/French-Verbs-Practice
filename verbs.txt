@@ -16,7 +16,7 @@ to discuss, discuter, False, discuter, discut, discuté, False, False
 to drink, boire, False, boir, buv, bu, False, True, bois, bois, boit, buvons, buvez, boivent
 to win, gagner, False, gagner, gagn, gagné, False, False
 to find, trouver, False, trouver, trouv, trouvé, False, False
-to finish, finir, False, finir, fin, fini, False, False
+to finish, finir, False, finir, finiss, fini, False, False
 to anger, fâcher, True, fâcher, fâch, fâché, False, False
 to give, donner, False, donner, donn, donné, False, False
 to get up, lever, True, lèver, lev, levé, False, True, lève, lèves, lève, levons, levez, lèvent
