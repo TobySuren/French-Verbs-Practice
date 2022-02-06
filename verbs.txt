@@ -1,6 +1,70 @@
 to be, être, False, ser, ét, été, False, True, suis, es, est, sommes, êtes, sont
 to go, aller, False, ir, all, allé, True, True, vais, vas, va, allons, allez, vont
-to work, travailler, False, travailler, travaill, travaillé, False, False
-to eat, manger, False, manger, mang, mangé, False, False
-to be able to, pouvoir, False, pourr, pouv, pu, False, True, peux, peux, peut, pouvons, pouvez, pouvent
+to do, faire, False, fer, fais, fait, False, True, fais, fais, fait, faisons, faites, font
 to be called, appeler, True, appeller, appel, appelé, False, True, appelle, appelles, appelle, appelons, appelez, appellent
+to work, travailler, False, travailler, travaill, travaillé, False, False
+to be able to, pouvoir, False, pourr, pouv, pu, False, True, peux, peux, peut, pouvons, pouvez, pouvent
+to have to, devoir, False, devr, dev, dû, False, True, dois, dois, doit, devons, devez, doivent
+to want, vouloir, False, voudr, voul, voulu, False, True, veux, veux, veut, voulons, voulez, veulent
+to watch, regarder, False, regarder, regard, regardé, False, False
+to eat, manger, False, manger, mang, mangé, False, False
+to choose, choisir, False, choisir, choisiss, choisi, False, False
+to close, fermer, False, fermer, ferm, fermé, False, False
+to decide, décider, False, décider, décid, décidé, False, False
+to leave, partir, False, partir, part, parti, True, True, pars, pars, part, partons, partez, partent
+to discuss, discuter, False, discuter, discut, discuté, False, False
+to drink, boire, False, boir, buv, bu, False, True, bois, bois, boit, buvons, buvez, boivent
+to win, gagner, False, gagner, gagn, gagné, False, False
+to find, trouver, False, trouver, trouv, trouvé, False, False
+to finish, finir, False, finir, fin, fini, False, False
+to anger, fâcher, True, fâcher, fâch, fâché, False, False
+to give, donner, False, donner, donn, donné, False, False
+to get up, lever, True, lèver, lev, levé, False, True, lève, lèves, lève, levons, levez, lèvent
+to go out, sortir, False, sortir, sort, sorti, True, True, sors, sors, sort, sortons, sortez, sortent
+to hate, détester, False, détester, détest, détesté, False, False
+to help, aider, False, aider, aid, aidé, False, False
+to improve, améliorer, False, améliorer, amélior, amélioré, False, False
+to know (a fact), savoir, False, saur, sav, su, False, True, sais, sais, sait, savons, savez, savent
+to know (person/place), connaître, False, connaîtr, connaîss, connu, False, True, connais, connais, connaît, connaissons, connaissez, connaissent
+to last, durer, False, durer, dur, duré, False, False
+to laugh, rire, False, rir, ri, rit, False, True, ris, ris, rit, rions, riez, rient
+to learn, apprendre, False, apprendr, appren, appris, False, False
+to like, aimer, False, aimer, aim, aimé, False, False
+to listen, écouter, False, écouter, écout, écouté, False, False
+to live, habiter, False, habiter, habit, habité, False, False
+to lose, perdre, False, perdr, perd, perdu, False, False
+to love, adorer, False, adorer, ador, adoré, False, False
+to meet, rencontrer, False, rencontrer, rencontr, rencontré, False, False
+to miss, rater, False, rater, rat, raté, False, False
+to open, ouvrir, False, ouvrir, ouvr, ouvert, False, True, ouvre, ouvres, ouvre, ouvrons, ouvrez, ouvrent
+to pass, passer, False, passer, pass, passé, False, False
+to prefer, préférer, False, préférer, préfér, préféré, False, True, préfère, préfères, préfère, préférons, préférez, préfèrent
+to put on, mettre, False, mettr, mett, mis, False, True, mets, mets, met, mettons, mettez, mettent
+to read, lire, False, lir, lis, lu, False, True, lis, lis, lit, lisons, lisez, lisent
+to repair, réparer, False, réparer, répar, réparé, False, False
+to repeat, répéter, False, répéter, répét, répété, False, True, répète, répètes, répète, répétons, répétez, répètent
+to save, sauver, False, sauver, sauv, sauvé, False, False
+to say, dire, False, dir, dis, dit, False, True, dis, dis, dit, disons, dites, disent
+to see, voir, False, verr, voy, vu, False, True, vois, vois, voit, voyons, voyez, voient
+to sell, vendre, False, vendr, vend, vendu, False, False
+to send, envoyer, False, enverr, envoy, envoyé, False, True, envoie, envoies, envoie, envoyons, envoyez, envoient
+to sing, chanter, False, chanter, chant, chanté, False, False
+to speak, parler, False, parler, parl, parlé, False, False
+to stay, rester, False, rester, rest, resté, True, False
+to stop, arrêter, False, arrêter, arrêt, arrêté, False, False
+to study, étudier, False, étudier, étudi, étudié, False, False
+to succeed, réussir, False, réussir, réussiss, réussi, False, False
+to switch off, éteindre, False, éteindr, éteign, éteint, False, True, éteins, éteins, éteint, éteignons, éteignez, éteignent
+to take, prendre, False, prendr, pren, pris, False, True, prends, prends, prend, prenons, prenez, prennent
+to think, penser, False, penser, pens, pensé, False, False
+to believe, croire, False, croir, croy, cru, False, True, crois, crois, croit, croyons, croyez, croient
+to travel, voyager, False, voyager, voyag, voyagé, False, False
+to try, essayer, False, essayer, essay, essayé, False, False
+to understand, comprendre, False, comprendr, compren, compris, False, True, comprends, comprends, comprend, comprenons, comprenez, comprennent
+to use, utiliser, False, utiliser, utilis, utilisé, False, False
+to visit, visiter, False, visiter, visit, visité, False, False
+to wait for, attendre, False, attendr, attend, attendu, False, False
+to wake up, réveiller, True, réveiller, réveill, réveillé, True, False
+to walk, marcher, False, marcher, march, marché, False, False
+to wear, porter, False, porter, port, porté, False, False
+to write, écrire, False, écrir, écriv, écrit, False, True, écris, écris, écrit, écrivons, écrivez, écrivent
