@@ -9,6 +9,9 @@ amStem = ["Je suis ", "Tu es ", "Il est ", "Nous sommes ", "Vous êtes ", "Ils s
 erEnd = ["e", "es", "e", "ons", "ez", "ent"]
 irEnd = ["is", "is", "it", "issons", "issez", "issent"]
 reEnd = ["s", "s", "", "ons", "ez" "ent"]
+meVowelForms = ["m'", "t'", "s'", "nous ", "vous ", "s'"]
+meForms = ["me ", "te ", "se ", "nous ", "vous ", "se "]
+vowels = ["a", "e", "i", "o", "u", "é", "â", "ê", "î", "ô", "û", "à", "è", "ì", "ò", "ù", "ë", "ï", "ü"]
 
 
 def startup(): #loads up the verbs 2d array
@@ -33,8 +36,9 @@ def startup(): #loads up the verbs 2d array
             try:
                 main()
 
-            except: #error messages
-                print("Error: verbs.txt could not be read. Please make sure the correct format is used.")  
+            except BaseException as errorMessage: #error messages
+                print("Error: verbs.txt could not be read. Please make sure the correct format is used. Error message:")
+                print(errorMessage)
         else:
             print("Error: verbs.txt is empty.")     
     except:
@@ -45,20 +49,40 @@ forms = ["I", "you (singular)", "he", "we", "you (plural)", "they"] #all verb fo
 tenses = ["past perfect", "past imperfect", "present", "near future", "future simple", "conditional"] #all tenses
 
 
+def checkVowel(stem):
+    firstLetter = stem[0].lower()
+    for i in vowels:
+        if firstLetter == i:
+            return True
+    return False
+
 def perf(verb, form): #past perfect tense
-    if verbs[verb][7]:
+    if verbs[verb][6]:
         output = amStem[form]
     else:
         output = haveStem[form]
 
-    output += verbs[verb][6]
+    if verbs[verb][2]:
+        if checkVowel(verbs[verb][5]):
+            output += meVowelForms[form]
+        else:
+            output += meForms[form]
+
+    output += verbs[verb][5]
     return output
 
 def imperf(verb, form): #past imperfect tense
-    if form == 0 and verbs[verb][5]:
+    if form == 0 and checkVowel(verbs[verb][4]) and not verbs[verb][2]:
         output = "J'"
     else:
         output = frenchForms[form]
+
+    if verbs[verb][2]:
+        if checkVowel(verbs[verb][4]):
+            output += meVowelForms[form]
+        else:
+            output += meForms[form]
+
     output += verbs[verb][4]
 
     if (verbs[verb][1])[-2:] == "ger" and form != 3 and form != 4: #special case for -ger verbs e.g. manger
@@ -67,45 +91,74 @@ def imperf(verb, form): #past imperfect tense
     return output
 
 def present(verb, form): #present tense
-    if form == 0 and verbs[verb][8]:
+    stem = ""
+    if verbs[verb][7]: #irregular
+        stem = verbs[verb][form + 8]
+    
+    else: #regular
+        stem = (verbs[verb][1])[:-2]
+        if (verbs[verb][1])[-2:] == "ger" and form == 3: #special case for -ger verbs e.g. manger
+            stem += "e"
+        ending = (verbs[verb][1])[-2:]
+        stem += eval(ending+"End["+str(form)+"]")
+
+    if form == 0 and checkVowel(stem) and not verbs[verb][2]:
         output = "J'"
     else:
         output = frenchForms[form]
 
-    if verbs[verb][9]: #irregular
-        output += verbs[verb][form + 10]
+    if verbs[verb][2]:
+        if checkVowel(stem):
+            output += meVowelForms[form]
+        else:
+            output += meForms[form]
+
+    output += stem
     
-    else: #regular
-        output += (verbs[verb][1])[:-2]
-        if (verbs[verb][1])[-2:] == "ger" and form == 3: #special case for -ger verbs e.g. manger
-            output += "e"
-        ending = (verbs[verb][1])[-2:]
-        output += eval(ending+"End["+str(form)+"]")
     return output
             
         
 def near(verb, form): #near future
     output = nearStems[form]
+
+    if verbs[verb][2]:
+        if verbs[verb][10]:
+            output += meVowelForms[form]
+        else:
+            output += meForms[form]
+    
     output += verbs[verb][1]
     return output
 
 def simple(verb, form): #simple future
-    if form == 0 and verbs[verb][3]:
+    if form == 0 and checkVowel(verbs[verb][3]) and not verbs[verb][2]:
         output = "J'"
     else:
         output = frenchForms[form]
 
-    output += verbs[verb][2]
+    if verbs[verb][2]:
+        if checkVowel(verbs[verb][3]):
+            output += meVowelForms[form]
+        else:
+            output += meForms[form]
+
+    output += verbs[verb][3]
     output += simpleEndings[form]
     return output
 
 def cond(verb, form): #conditional
-    if form == 0 and verbs[verb][3]:
+    if form == 0 and checkVowel(verbs[verb][3]) and not verbs[verb][2]:
         output = "J'"
     else:
         output = frenchForms[form]
 
-    output += verbs[verb][2]
+    if verbs[verb][2]:
+        if checkVowel(verbs[verb][3]):
+            output += meVowelForms[form]
+        else:
+            output += meForms[form]
+
+    output += verbs[verb][3]
     output += conEndings[form]
     return output
 
@@ -136,4 +189,4 @@ def main(): #the main playing loop
 
 startup()
 
-#ADD TO README: the verbs should be written as a table each in verbs.txt: english name, infinitive, conditional & simple stem, if they start with a vowel in conditional & simple, imperfect stem, if they start with a vowel in imperfect, perfect verb, if the perfect tense uses "to be", if the present tense starts with a vowel, if the present tense is irregular
+#ADD TO README: the verbs should be written as a table each in verbs.txt: 0english name, 1infinitive, 2if it starts with "me", 3conditional & simple stem, 4imperfect stem, 5perfect verb, 6if the perfect tense uses "to be", 7if the present tense is irregular (followed by the 6 present endings if so)
